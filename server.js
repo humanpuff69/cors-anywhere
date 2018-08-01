@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: ['https://codashop-indo.me', 'http://codashop-indo.me'],
+  originWhitelist: ['https://codashop-indo.me', 'http://codashop-indo.me' , 'localhost'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
